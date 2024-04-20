@@ -1,6 +1,6 @@
-llama - index
+llama-index
 streamlit
-llama - index - llms - ollama
-llama - index - embeddings - huggingface
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
 ipython
 watchdog
