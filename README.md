@@ -35,4 +35,6 @@ Follow these steps to set up and run the application:
 Use the following command to run the application:
 
 ```bash
+ollama run llama3:7b
 streamlit run app.py
+```
