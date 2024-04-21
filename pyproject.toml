@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dochat"
+version = "0.1.0"
+description = "Chat with your Docs"
+authors = ["Saurabh Chopra <sc@saurabhchopra.co.uk>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+dochat = "dochat.main:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+llama-index = "^0.10.30"
+llama-index-llms-ollama = "^0.1.2"
+llama-index-embeddings-huggingface = "^0.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.0"
+ruff = "^0.4.1"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

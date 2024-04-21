@@ -1,6 +1,0 @@
-llama-index
-streamlit
-llama-index-llms-ollama
-llama-index-embeddings-huggingface
-ipython
-watchdog

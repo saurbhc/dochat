@@ -64,11 +64,13 @@ with st.sidebar:
 
                     if os.path.exists(temp_dir):
                         loader = SimpleDirectoryReader(
-                            input_dir=temp_dir, required_exts=[".pdf"], recursive=True
+                            input_dir=temp_dir,
+                            required_exts=[".pdf"],
+                            recursive=True,
                         )
                     else:
                         st.error(
-                            "Could not find the file you uploaded, please check again..."
+                            "Could not find the file you uploaded, please check again...",
                         )
                         st.stop()
 
@@ -77,7 +79,8 @@ with st.sidebar:
                     # setup llm & embedding model
                     llm = Ollama(model="llama3:8b", request_timeout=120.0)
                     embed_model = HuggingFaceEmbedding(
-                        model_name="BAAI/bge-large-en-v1.5", trust_remote_code=True
+                        model_name="BAAI/bge-large-en-v1.5",
+                        trust_remote_code=True,
                     )
                     # Creating an index over loaded data
                     Settings.embed_model = embed_model
@@ -100,7 +103,7 @@ with st.sidebar:
                     qa_prompt_tmpl = PromptTemplate(qa_prompt_tmpl_str)
 
                     query_engine.update_prompts(
-                        {"response_synthesizer:text_qa_template": qa_prompt_tmpl}
+                        {"response_synthesizer:text_qa_template": qa_prompt_tmpl},
                     )
 
                     st.session_state.file_cache[file_key] = query_engine
