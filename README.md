@@ -1,40 +1,24 @@
-# Chat with your docs Locally (with llama3:8b)
+# dochat
 
-This application allows you to upload a PDF and ask questions about its content.
+CLI to query your docs on the terminal.
 
-## Setup and Installation
+## Installation
 
-Follow these steps to set up and run the application:
-
-1. **Create a virtual environment**
-
-    Use the following command to create a new virtual environment named `.venv`:
-
-    ```bash
-    python3 -m venv .venv
-    ```
-
-2. **Activate the virtual environment**
-
-    Use the following command to activate the virtual environment:
-
-    ```bash
-    source .venv/bin/activate
-    ```
-
-3. **Install the required packages**
-
-    Use the following command to install the packages listed in `requirements.txt`:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Running the Application
-
-Use the following command to run the application:
+### Ollama Serve (LLM Server)
 
 ```bash
-ollama run llama3:7b
-streamlit run app.py
+ollama serve
+```
+
+### Setup
+
+```bash
+poetry install
+```
+
+# Usage
+
+```bash
+dochat <file> <query>
+dochat tests/data/ArgparseTutorial.pdf "Summary of the tutorial"
 ```
